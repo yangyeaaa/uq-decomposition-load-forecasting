@@ -1,0 +1,26 @@
+tr: 6669/8616 kept after thinning z_T>0.8
+es: 3363/4296 kept after thinning z_T>0.8
+cal: 3384/4296 kept after thinning z_T>0.8
+test: 1936 of 8592 points in the sparse region
+
+[1] MC dropout at several p (seed 1)
+MC-dropout p=0.05      | ale: corr=0.764 rho=0.800 bias=+0.070 (dense +0.131, sparse -0.139) | epi: dense=25.3 sparse=28.4 ratio=1.12 (true mean-error ratio 1.65) | rho(epi,|mu-f|)=0.115 rho(epi,kNN dist)=0.175 AUC(sparse>dense)=0.394 | dense region: rho(epi,|x|)=0.536 vs rho(|mu-f|,|x|)=0.079
+MC-dropout p=0.1       | ale: corr=0.780 rho=0.812 bias=+0.127 (dense +0.195, sparse -0.104) | epi: dense=31.6 sparse=37.1 ratio=1.17 (true mean-error ratio 1.77) | rho(epi,|mu-f|)=0.129 rho(epi,kNN dist)=0.152 AUC(sparse>dense)=0.431 | dense region: rho(epi,|x|)=0.536 vs rho(|mu-f|,|x|)=0.097
+MC-dropout p=0.3       | ale: corr=0.594 rho=0.664 bias=+0.298 (dense +0.397, sparse -0.044) | epi: dense=56.8 sparse=68.9 ratio=1.21 (true mean-error ratio 1.53) | rho(epi,|mu-f|)=0.242 rho(epi,kNN dist)=0.138 AUC(sparse>dense)=0.465 | dense region: rho(epi,|x|)=0.484 vs rho(|mu-f|,|x|)=0.271
+
+[2] deep ensemble K=5 (heteroscedastic members, deterministic)
+Ensemble K=5           | ale: corr=0.874 rho=0.893 bias=+0.130 (dense +0.185, sparse -0.059) | epi: dense=17.2 sparse=26.4 ratio=1.53 (true mean-error ratio 1.79) | rho(epi,|mu-f|)=0.224 rho(epi,kNN dist)=0.238 AUC(sparse>dense)=0.689 | dense region: rho(epi,|x|)=0.179 vs rho(|mu-f|,|x|)=0.141
+
+[3] ensemble + MC dropout (K=5 x 20 masks)
+Ensemble+MCD           | ale: corr=0.870 rho=0.891 bias=+0.153 (dense +0.210, sparse -0.046) | epi: dense=37.9 sparse=47.5 ratio=1.25 (true mean-error ratio 1.78) | rho(epi,|mu-f|)=0.215 rho(epi,kNN dist)=0.190 AUC(sparse>dense)=0.520 | dense region: rho(epi,|x|)=0.516 vs rho(|mu-f|,|x|)=0.141
+
+[4] epistemic by temperature bin (MW): does each source rise only where data were removed?
+                                  z_T<-1             -1..0            0..0.8 0.8..1.5 (sparse)     >1.5 (sparse)       n
+true |mu-f| (ens)                   26.7              21.9              22.0              35.8              67.1        
+MCD p=0.1                           35.0              31.2              28.7              31.7              58.6        
+Ensemble                            17.7              17.0              17.0              24.6              33.4        
+true sigma(x)                       75.5             107.5             166.2             195.3             205.2        
+ale MCD p=0.1                      104.8             130.3             161.4             169.5             206.8        
+ale Ensemble                       104.4             127.2             162.4             179.7             210.1        
+count                               2109              2384              2155              1546               390
+DONE

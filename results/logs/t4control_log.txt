@@ -1,0 +1,15 @@
+[T4 control] full-data vs thinned training; Delta = epi_thin - epi_full per test input
+estimator               epi full: dense/sparse  epi thin: dense/sparse mean Delta dense mean Delta sparse Delta ratio AUC(Delta) rho(Delta,|x|cont) dense
+MC dropout p=0.1             37.2/40.9              32.1/37.6                    -5.1              -3.2 -5659457.09      0.635                   -0.146
+Ensemble K=5                 18.8/24.6              19.3/29.5                     0.5               4.9       10.29      0.601                   -0.059
+true change in |mu-f| (ensemble): dense +0.8 MW, sparse +16.5 MW; AUC(dE)=0.649
+aleatoric recovery on full data (ensemble): rho=0.937 bias=+0.157
+
+[T3 variant] shift all seven lag temperatures jointly by delta (K=10 ensemble, real GEF)
+ delta  sig_epi  sig_ale  R_epi  frac beyond train max   (last-lag-only shift in brackets)
+   0.0     33.3    135.0  0.061                  0.000   [33.3 / 135.0 / 0.061]
+   0.5     38.2    143.9  0.069                  0.019   [40.8 / 144.5 / 0.078]
+   1.0     48.7    156.6  0.091                  0.146   [56.9 / 161.8 / 0.112]
+   1.5     63.1    172.5  0.117                  0.347   [80.6 / 187.7 / 0.153]
+   2.0     81.0    190.7  0.147                  0.527   [110.9 / 222.8 / 0.192]
+DONE

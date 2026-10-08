@@ -1,0 +1,6 @@
+T4 seed replication, MC dropout p=0.1, M=40: change in epistemic estimate under thinning (MW), paired by seed
+  seed 1: unthinned -5.2  thinned -3.2  contrast +2.0 [95% CI +1.4, +2.6]  AUC 0.59
+  seed 2: unthinned +0.1  thinned -0.6  contrast -0.7 [95% CI -1.2, -0.2]  AUC 0.47
+  seed 3: unthinned -0.1  thinned +0.4  contrast +0.4 [95% CI -0.2, +0.9]  AUC 0.51
+  mean over 3 seeds: unthinned -1.7  thinned -1.1  contrast +0.6 [95% CI +0.2, +0.9]  AUC 0.54
+DONE

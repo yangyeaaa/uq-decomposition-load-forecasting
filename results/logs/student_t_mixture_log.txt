@@ -1,0 +1,33 @@
+
+======================================================================
+GEF: Gaussian vs Student-t heteroscedastic likelihood, K=5 (seeds 10-14), test partition
+======================================================================
+  t member 0: nu=4.23
+  t member 1: nu=4.23
+  t member 2: nu=4.32
+  t member 3: nu=4.26
+  t member 4: nu=4.23
+                                              MAE     RMSE     CRPS      NLL  Pinball     IS90      ECE   PICP90   PIT_KS   R_epi
+Gaussian K=5, moment-matched (paper)        108.9    151.4    78.93     6.34    41.31    634.3  0.01675   0.8963   0.0252   0.058
+Gaussian K=5, exact mixture                 108.9    151.4    78.93    6.337    41.31    634.7   0.0138   0.8946  0.02212   0.058
+Student-t K=5, single-t approx (old)        106.8    148.4    77.63    6.307     40.6      nan  0.02311   0.9274   0.0197        
+Student-t K=5, exact mixture (new)          106.8    148.4    77.54    6.306    40.58    625.9  0.02029   0.9232  0.01984   0.042
+  mean learned nu = 4.25 (members: 4.23, 4.23, 4.32, 4.26, 4.23);  MAE of mixture median = 106.8 MW
+  decomposition under t (exact): sigma_ale=161.3 MW  sigma_epi=36.9 MW  R_epi=0.042 | Gaussian: sigma_ale=131.2 sigma_epi=30.4 R_epi=0.058
+
+======================================================================
+COVID: Gaussian vs Student-t heteroscedastic likelihood, K=5 (seeds 10-14), test partition
+======================================================================
+  t member 0: nu=4.12
+  t member 1: nu=4.14
+  t member 2: nu=4.15
+  t member 3: nu=4.15
+  t member 4: nu=4.14
+                                              MAE     RMSE     CRPS      NLL  Pinball     IS90      ECE   PICP90   PIT_KS   R_epi
+Gaussian K=5, moment-matched (paper)    2.198e+04 3.04e+041.602e+04    11.71     83761.353e+05  0.01535   0.8925   0.1276   0.051
+Gaussian K=5, exact mixture             2.198e+04 3.04e+04  1.6e+04     11.7     83671.353e+05  0.01005     0.89    0.128   0.051
+Student-t K=5, single-t approx (old)    2.078e+042.943e+041.525e+04     11.6     7974      nan  0.01861   0.8934  0.09412        
+Student-t K=5, exact mixture (new)      2.078e+042.943e+041.525e+04     11.6     79771.311e+05  0.02134   0.8894  0.09466   0.051
+  mean learned nu = 4.14 (members: 4.12, 4.14, 4.15, 4.15, 4.14);  MAE of mixture median = 20793.0 MW
+  decomposition under t (exact): sigma_ale=27361.8 MW  sigma_epi=7014.2 MW  R_epi=0.051 | Gaussian: sigma_ale=25984.5 sigma_epi=5573.0 R_epi=0.051
+DONE

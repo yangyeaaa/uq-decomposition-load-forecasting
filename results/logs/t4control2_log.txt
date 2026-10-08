@@ -1,0 +1,22 @@
+  member 0 ready
+  member 1 ready
+  member 2 ready
+  member 3 ready
+  member 4 ready
+  member 5 ready
+  member 6 ready
+  member 7 ready
+  member 8 ready
+  member 9 ready
+
+[paired controlled comparison, ensemble] Delta = epi_thin - epi_full (MW); members paired by seed
+  K=5, members 0-4  : Delta unthinned=+0.5  thinned=+4.9  contrast=+4.4  AUC=0.601
+  K=5, members 5-9  : Delta unthinned=+0.7  thinned=+5.5  contrast=+4.8  AUC=0.632
+  K=10, members 0-9 : Delta unthinned=+0.3  thinned=+4.9  contrast=+4.6  AUC=0.655
+  Delta e (K=10): unthinned=+1.2 thinned=+16.2 contrast=+15.0 AUC=0.641
+
+[paired controlled comparison, MC dropout, M=40]
+  p=0.05: Delta unthinned=+1.9  thinned=+1.6  contrast=-0.3  AUC=0.485
+  p=0.10: Delta unthinned=-5.1  thinned=-3.2  contrast=+1.9  AUC=0.575
+  p=0.30: Delta unthinned=+1.5  thinned=+3.3  contrast=+1.8  AUC=0.554
+DONE

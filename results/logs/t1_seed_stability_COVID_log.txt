@@ -1,0 +1,12 @@
+COVID: heteroscedastic backbone, p=0.1, seeds [1, 2, 3, 4, 5]; MC dropout M=40 (Bessel-corrected)
+seed 1: MVE MAE=2.185e+04 sigma_total=0.1468 ECE=0.0391 PICP90=0.8422 | MC dropout R_epi=0.1220 MAE=2.188e+04 ECE=0.0193 PICP90=0.8741
+seed 2: MVE MAE=2.193e+04 sigma_total=0.1419 ECE=0.0637 PICP90=0.8302 | MC dropout R_epi=0.1394 MAE=2.197e+04 ECE=0.0177 PICP90=0.8667
+seed 3: MVE MAE=2.252e+04 sigma_total=0.1766 ECE=0.0143 PICP90=0.8915 | MC dropout R_epi=0.1502 MAE=2.257e+04 ECE=0.0508 PICP90=0.9207
+seed 4: MVE MAE=2.227e+04 sigma_total=0.1728 ECE=0.0157 PICP90=0.8811 | MC dropout R_epi=0.1075 MAE=2.229e+04 ECE=0.0383 PICP90=0.9027
+seed 5: MVE MAE=2.318e+04 sigma_total=0.1500 ECE=0.0758 PICP90=0.8153 | MC dropout R_epi=0.1198 MAE=2.32e+04 ECE=0.0371 PICP90=0.8519
+MVE MAE: mean=2.235e+04 sd=536.9 range=[2.185e+04,2.318e+04]
+MC dropout R_epi: mean=0.1278 sd=0.01694 range=[0.1075,0.1502]
+MVE sigma_total: mean=0.1576 sd=0.0159 range=[0.1419,0.1766]
+MVE ECE: mean=0.04173 sd=0.02776 range=[0.01428,0.07582]
+MVE PICP90: mean=0.852 sd=0.03289 range=[0.8153,0.8915]
+DONE

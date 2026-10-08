@@ -1,0 +1,3 @@
+init (log s_ale, log s_epi) = (+0.0, -1.0): R_epi=0.952 sigma_total=0.2510 MAE=109.1 ECE=0.031 PICP90=0.906
+init (log s_ale, log s_epi) = (-1.0, +0.0): R_epi=0.036 sigma_total=0.2297 MAE=108.9 ECE=0.011 PICP90=0.880
+init (log s_ale, log s_epi) = (-2.0, +0.5): R_epi=0.208 sigma_total=0.2312 MAE=110.1 ECE=0.013 PICP90=0.875

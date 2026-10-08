@@ -1,0 +1,7 @@
+01-01..02-29 (pre)           days   0- 60: R_epi=0.065  sig_epi=9.29 MW  sig_ale=37.54 MW
+03-01..03-14 (pre, late)     days  60- 74: R_epi=0.074  sig_epi=9.38 MW  sig_ale=35.41 MW
+03-15..03-31 (onset)         days  74- 91: R_epi=0.038  sig_epi=4.87 MW  sig_ale=25.28 MW
+04-01..04-30 (lockdown)      days  91-121: R_epi=0.049  sig_epi=5.29 MW  sig_ale=24.20 MW
+05-01..06-30                 days 121-182: R_epi=0.062  sig_epi=6.40 MW  sig_ale=25.70 MW
+07-01..08-31                 days 182-244: R_epi=0.068  sig_epi=6.76 MW  sig_ale=26.21 MW
+09-01..11-06                 days 244-310: R_epi=0.064  sig_epi=6.97 MW  sig_ale=28.53 MW

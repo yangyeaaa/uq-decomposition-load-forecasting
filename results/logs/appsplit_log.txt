@@ -1,0 +1,21 @@
+
+======================================================================
+GEF: K=10 ensemble, alternating-day split (early-stop days even, calibration days odd)
+======================================================================
+early-stop n=4296  calibration n=4296
+                                     MAE      RMSE      CRPS       NLL   Pinball      IS90       ECE    PICP90   R_epi  sig_epi  sig_ale
+raw                                108.8     151.1     78.84     6.335     41.27     630.5   0.02175    0.9007   0.058     31.5    133.6
++static conformal                  108.8     151.1     78.84     6.335     41.27       633   0.02763    0.9186
++online conformal W=90d            108.8     151.1     78.84     6.335     41.27     632.7  0.004586    0.8975
+reference (main 12h/12h split):
+
+======================================================================
+COVID: K=10 ensemble, alternating-day split (early-stop days even, calibration days odd)
+======================================================================
+early-stop n=1104  calibration n=1080
+                                     MAE      RMSE      CRPS       NLL   Pinball      IS90       ECE    PICP90   R_epi  sig_epi  sig_ale
+raw                            2.103e+04  2.96e+04 1.546e+04     11.68      8086 1.342e+05   0.04023    0.9006   0.055   6074.8  26291.9
++static conformal              2.103e+04  2.96e+04 1.546e+04     11.68      8086 1.355e+05   0.03412    0.8759
++online conformal W=90d        2.103e+04  2.96e+04 1.546e+04     11.68      8086 1.364e+05  0.002511    0.9027
+reference (main 12h/12h split):
+DONE

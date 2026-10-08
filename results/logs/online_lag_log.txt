@@ -1,0 +1,17 @@
+
+=== GEF: K=10 ensemble, online calibration with one-day lag (multiplier for day d+1 uses scores through day d-1) ===
+Raw (Gaussian)                     ECE=0.0287 PICP90=0.9036 IS90=631.49
+Global sd scaling                  ECE=0.0522 PICP90=0.9217 IS90=634.67
+Static split conformal             ECE=0.0220 PICP90=0.9193 IS90=634.01
+Rolling W=30d (lagged)             ECE=0.0076 PICP90=0.8871 IS90=643.11
+Rolling W=90d (lagged)             ECE=0.0054 PICP90=0.8972 IS90=635.58
+ACI gamma=0.01 on W=30d (lagged)   ECE=0.0044 PICP90=0.8936 IS90=646.19
+
+=== COVID: K=10 ensemble, online calibration with one-day lag (multiplier for day d+1 uses scores through day d-1) ===
+Raw (Gaussian)                     ECE=0.0346 PICP90=0.9016 IS90=1.3342e+05
+Global sd scaling                  ECE=0.0595 PICP90=0.9148 IS90=1.3384e+05
+Static split conformal             ECE=0.0399 PICP90=0.8807 IS90=1.3446e+05
+Rolling W=30d (lagged)             ECE=0.0073 PICP90=0.9002 IS90=1.407e+05
+Rolling W=90d (lagged)             ECE=0.0027 PICP90=0.8998 IS90=1.3615e+05
+ACI gamma=0.01 on W=30d (lagged)   ECE=0.0042 PICP90=0.9006 IS90=1.4178e+05
+DONE

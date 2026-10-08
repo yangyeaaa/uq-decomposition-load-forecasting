@@ -1,0 +1,17 @@
+
+=== GEF: 8592 test points, 358 days; warm-start calibration scores n=4296
+Raw (Gaussian)               ECE=0.0775 PICP90=0.9327 IS90=652.2 mean width90=530
+Static split conformal       ECE=0.0261 PICP90=0.9157 IS90=643.77 mean width90=492.73
+Rolling conformal W=30d      ECE=0.0051 PICP90=0.8905 IS90=648.77 mean width90=458.93
+Rolling conformal W=90d      ECE=0.0028 PICP90=0.8951 IS90=646.8 mean width90=455.42
+ACI (gamma=0.01) on W=30d    ECE=0.0039 PICP90=0.8942 IS90=650.74 mean width90=469.4
+Rolling temperature W=30d    ECE=0.0242 PICP90=0.8939 IS90=645.09 mean width90=465
+
+=== COVID: 5272 test points, 220 days; warm-start calibration scores n=1092
+Raw (Gaussian)               ECE=0.0185 PICP90=0.8741 IS90=1.4398e+05 mean width90=84235
+Static split conformal       ECE=0.0433 PICP90=0.8574 IS90=1.4543e+05 mean width90=79629
+Rolling conformal W=30d      ECE=0.0049 PICP90=0.9012 IS90=1.5055e+05 mean width90=97620
+Rolling conformal W=90d      ECE=0.0042 PICP90=0.8978 IS90=1.4522e+05 mean width90=92819
+ACI (gamma=0.01) on W=30d    ECE=0.0020 PICP90=0.9004 IS90=1.5116e+05 mean width90=97825
+Rolling temperature W=30d    ECE=0.0635 PICP90=0.9086 IS90=1.5075e+05 mean width90=1.0166e+05
+DONE

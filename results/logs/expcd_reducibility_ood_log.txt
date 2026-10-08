@@ -1,0 +1,54 @@
+======================================================================
+[c] reducibility: nested uniform subsets, 3 replicates, K=5 ensemble, GEF
+======================================================================
+  rep 0 frac 0.10 n=861: epi=44.1 ale=190.2 R=0.061 MAE=149.8
+  rep 0 frac 0.25 n=2154: epi=39.5 ale=153.1 R=0.070 MAE=114.8
+  rep 0 frac 0.50 n=4308: epi=26.7 ale=140.4 R=0.040 MAE=109.7
+  rep 0 frac 0.75 n=6462: epi=28.7 ale=132.1 R=0.051 MAE=108.8
+  rep 0 frac 1.00 n=8616: epi=27.2 ale=131.2 R=0.047 MAE=108.9
+  rep 1 frac 0.10 n=861: epi=45.4 ale=186.3 R=0.066 MAE=146.6
+  rep 1 frac 0.25 n=2154: epi=38.8 ale=151.0 R=0.070 MAE=113.7
+  rep 1 frac 0.50 n=4308: epi=31.7 ale=141.1 R=0.055 MAE=109.9
+  rep 1 frac 0.75 n=6462: epi=28.4 ale=133.4 R=0.051 MAE=110.4
+  rep 1 frac 1.00 n=8616: epi=31.3 ale=143.9 R=0.054 MAE=109.1
+  rep 2 frac 0.10 n=861: epi=45.3 ale=189.3 R=0.068 MAE=144.4
+  rep 2 frac 0.25 n=2154: epi=39.3 ale=154.3 R=0.070 MAE=116.8
+  rep 2 frac 0.50 n=4308: epi=26.1 ale=140.3 R=0.039 MAE=109.8
+  rep 2 frac 0.75 n=6462: epi=28.6 ale=137.3 R=0.048 MAE=109.5
+  rep 2 frac 1.00 n=8616: epi=27.5 ale=139.5 R=0.044 MAE=108.4
+
+  frac     n         sig_epi         sig_ale           R_epi           MAE          CRPS   epi tails   epi mid PICP ale-only  PICP total
+  0.10   861      44.9 ± 0.7     188.6 ± 2.0   0.065 ± 0.004   146.9 ± 2.7   106.8 ± 2.1        44.1      45.1         0.894       0.906
+  0.25  2154      39.2 ± 0.4     152.8 ± 1.6   0.070 ± 0.000   115.1 ± 1.6    83.9 ± 1.1        40.7      38.8         0.906       0.918
+  0.50  4308      28.2 ± 3.1     140.6 ± 0.4   0.045 ± 0.009   109.8 ± 0.1    79.6 ± 0.1        30.7      27.6         0.903       0.910
+  0.75  6462      28.6 ± 0.1     134.3 ± 2.7   0.050 ± 0.002   109.6 ± 0.8    79.4 ± 0.3        31.8      27.8         0.890       0.899
+  1.00  8616      28.7 ± 2.3     138.2 ± 6.4   0.048 ± 0.005   108.8 ± 0.3    79.0 ± 0.2        34.0      27.3         0.901       0.908
+  replicate 0: sigma_epi by fraction = [44.1, 39.5, 26.7, 28.7, 27.2]  monotone decreasing: False
+  replicate 1: sigma_epi by fraction = [45.4, 38.8, 31.7, 28.4, 31.3]  monotone decreasing: False
+  replicate 2: sigma_epi by fraction = [45.3, 39.3, 26.1, 28.6, 27.5]  monotone decreasing: False
+
+======================================================================
+[d1] held-out temperature band: train without last-lag z_T>1.0 (K=5), test in-band vs out-of-band
+======================================================================
+training points kept: 7033/8616
+                              out-of-band (seen)  in-band (unseen)   ratio
+sigma_epi, band-holdout                     27.4              41.1    1.50
+sigma_epi, full-data                        25.3              37.3    1.48
+sigma_ale, band-holdout                    122.7             168.2    1.37
+sigma_ale, full-data                       122.9             174.9    1.42
+|error|, band-holdout                      100.9             189.4    1.88
+|error|, full-data                          97.6             168.0    1.72
+n out-of-band=7218, in-band=1374
+PICP90 in-band: ale-only=0.737  total=0.752 | out-of-band: ale-only=0.888 total=0.896
+
+======================================================================
+[d2] temperature-only shift of the last lag day (+delta std), full-data K=10 ensemble
+======================================================================
+ delta  sig_epi  sig_ale  R_epi  frac of shifted temps beyond train max
+   0.0     31.6    135.0  0.056                                   0.000
+   0.5     38.7    144.5  0.071                                   0.004
+   1.0     53.9    161.8  0.103                                   0.063
+   1.5     76.5    187.7  0.141                                   0.194
+   2.0    105.2    222.8  0.178                                   0.363
+(reference: original 'scale all inputs' probe, MC-dropout p=0.1: epi 38.6->54.5, ale 155.8->248.5 for s=1->2)
+DONE

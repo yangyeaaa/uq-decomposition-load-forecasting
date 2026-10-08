@@ -1,0 +1,53 @@
+
+======================================================================
+GEF: data-rich regime, K=10, Bessel, MW (post-COVID /1000)
+======================================================================
+[D1] review triage. MAE of unflagged hours (MW) at x=5/10/20/30%; captured share of top-10% errors at x=10%; AUC(top10 err); AUC(ale-interval fail)
+  sigma_epi    MAE|unfl:  104.91  101.71   95.89   90.94   capt10=0.227   AUC_top10=0.687   AUC_alefail=0.559
+  R_epi        MAE|unfl:  106.83  105.78  103.98  101.36   capt10=0.149   AUC_top10=0.576   AUC_alefail=0.551
+  sigma_total  MAE|unfl:  102.87   99.46   94.09   88.85   capt10=0.299   AUC_top10=0.739   AUC_alefail=0.541
+  sigma_ale    MAE|unfl:  103.17   99.48   94.23   89.76   capt10=0.298   AUC_top10=0.737   AUC_alefail=0.537
+  random       MAE|unfl:  108.45  108.26  108.44  108.13   capt10=0.105   AUC_top10=0.499   AUC_alefail=0.499
+  paired diff MAE|unfl (epi - total) at x=10%: +2.25 MW  [95% CI +0.18, +4.55]
+  paired diff MAE|unfl (epi - total) at x=30%: +2.09 MW  [95% CI -0.53, +4.58]
+  paired diff AUC(ale-fail) (epi - total): +0.018 [95% CI -0.017, +0.053]
+  base rate of aleatoric-interval failure: 0.106
+[D2] reserve: S = mu + q_tau * sqrt(ale^2 + c^2 epi^2), q per c on calibration half; cost per hour in MW
+   2:1  c*=3    cost total-only=  149.99  ale-only=  150.16  reweighted=  149.44  fixed=  150.78   relative change vs total = +0.37% [95% CI -0.10, +0.72]
+   5:1  c*=2    cost total-only=  212.33  ale-only=  212.97  reweighted=  211.76  fixed=  218.35   relative change vs total = +0.27% [95% CI -0.25, +0.60]
+  10:1  c*=1.5  cost total-only=  266.01  ale-only=  266.71  reweighted=  265.59  fixed=  273.70   relative change vs total = +0.15% [95% CI -0.09, +0.38]
+  20:1  c*=0.5  cost total-only=  318.80  ale-only=  319.93  reweighted=  319.72  fixed=  328.09   relative change vs total = -0.29% [95% CI -0.54, -0.02]
+[D3] warning of miscoverage: online rolling W=90 (lagged) 90% interval; daily scores vs daily miscoverage
+  daily R_epi            rho(score, miscoverage)=+0.135   miscoverage top-20% days=0.126 vs rest=0.097
+  daily sigma_epi        rho(score, miscoverage)=+0.166   miscoverage top-20% days=0.115 vs rest=0.100
+  calibrated half-width  rho(score, miscoverage)=+0.119   miscoverage top-20% days=0.105 vs rest=0.102
+  paired diff rho (R_epi - half-width): +0.016 [95% CI -0.117, +0.136]
+  paired diff top-20% miscoverage enrichment (R_epi - half-width): +0.025 [95% CI -0.042, +0.078]
+[interval] raw Gaussian 90%: PICP ale-only=0.894 total=0.904  dPICP=+0.009 [95% CI +0.006, +0.012]   width reduction without epi=3.3%   R_epi mean=0.061
+
+======================================================================
+COVID: data-rich regime, K=10, Bessel, MW (post-COVID /1000)
+======================================================================
+[D1] review triage. MAE of unflagged hours (MW) at x=5/10/20/30%; captured share of top-10% errors at x=10%; AUC(top10 err); AUC(ale-interval fail)
+  sigma_epi    MAE|unfl:   21.00   20.84   20.60   20.24   capt10=0.178   AUC_top10=0.600   AUC_alefail=0.569
+  R_epi        MAE|unfl:   21.11   21.02   21.05   21.06   capt10=0.153   AUC_top10=0.510   AUC_alefail=0.556
+  sigma_total  MAE|unfl:   20.85   20.10   19.14   18.45   capt10=0.242   AUC_top10=0.659   AUC_alefail=0.540
+  sigma_ale    MAE|unfl:   20.87   20.16   19.14   18.52   capt10=0.233   AUC_top10=0.650   AUC_alefail=0.530
+  random       MAE|unfl:   21.43   21.50   21.48   21.32   capt10=0.097   AUC_top10=0.494   AUC_alefail=0.487
+  paired diff MAE|unfl (epi - total) at x=10%: +0.74 MW  [95% CI +0.04, +1.41]
+  paired diff MAE|unfl (epi - total) at x=30%: +1.79 MW  [95% CI +0.18, +3.25]
+  paired diff AUC(ale-fail) (epi - total): +0.029 [95% CI -0.054, +0.139]
+  base rate of aleatoric-interval failure: 0.107
+[D2] reserve: S = mu + q_tau * sqrt(ale^2 + c^2 epi^2), q per c on calibration half; cost per hour in MW
+   2:1  c*=4    cost total-only=   28.50  ale-only=   28.50  reweighted=   28.47  fixed=   28.78   relative change vs total = +0.10% [95% CI -0.17, +0.42]
+   5:1  c*=4    cost total-only=   39.97  ale-only=   40.04  reweighted=   39.87  fixed=   41.17   relative change vs total = +0.23% [95% CI -0.71, +1.55]
+  10:1  c*=3    cost total-only=   50.23  ale-only=   50.33  reweighted=   50.04  fixed=   52.13   relative change vs total = +0.38% [95% CI -1.00, +2.15]
+  20:1  c*=4    cost total-only=   61.50  ale-only=   61.70  reweighted=   61.08  fixed=   65.06   relative change vs total = +0.68% [95% CI -2.66, +5.34]
+[D3] warning of miscoverage: online rolling W=90 (lagged) 90% interval; daily scores vs daily miscoverage
+  daily R_epi            rho(score, miscoverage)=+0.074   miscoverage top-20% days=0.128 vs rest=0.093
+  daily sigma_epi        rho(score, miscoverage)=+0.056   miscoverage top-20% days=0.121 vs rest=0.095
+  calibrated half-width  rho(score, miscoverage)=-0.063   miscoverage top-20% days=0.086 vs rest=0.103
+  paired diff rho (R_epi - half-width): +0.137 [95% CI -0.097, +0.410]
+  paired diff top-20% miscoverage enrichment (R_epi - half-width): +0.052 [95% CI -0.026, +0.162]
+[interval] raw Gaussian 90%: PICP ale-only=0.893 total=0.902  dPICP=+0.009 [95% CI +0.005, +0.012]   width reduction without epi=3.2%   R_epi mean=0.063
+DONE

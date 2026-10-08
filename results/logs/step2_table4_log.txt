@@ -1,0 +1,60 @@
+torch 2.13.0+cu130, CPU threads 1, 1 cores
+
+======================================================================
+GEF
+======================================================================
+train=8616  early-stop=4296  calibration=4296  test=8592
+Ours: R_epi=0.065 epi=38.5 ale=155.8 tau=0.941 q90=1.529
+MC-Dropout: epi=28.8 noise=162.7 R_epi=0.035
+  ensemble member 1/5 done
+  ensemble member 2/5 done
+  ensemble member 3/5 done
+  ensemble member 4/5 done
+  ensemble member 5/5 done
+Ensemble: R_epi=0.047 epi=27.2 ale=131.2
+
+Method                                         MAE      RMSE      MAPE      CRPS       NLL   Pinball      IS90       ECE    PICP90
+Ours (raw)                                   108.8     149.7     3.255     79.77     6.372     41.76     652.2   0.07748    0.9327
+Ours (+temperature)                          108.8     149.7     3.255     79.37     6.362     41.56     644.7   0.05645    0.9182
+Ours (+conformal)                            108.8     149.7     3.255     79.77     6.372     41.76     643.8   0.02611    0.9157
+MVE (heteroscedastic, deterministic)         108.7     149.6     3.251     79.22     6.356     41.48       642   0.05976     0.924
+MC-Dropout (homoscedastic)                   111.9     154.1     3.341      83.6     6.457     43.75     704.8   0.07137    0.9196
+Deep Ensemble (K=5)                          108.9     151.4     3.255     78.93     6.341     41.31     634.6   0.01531    0.8947
+Quantile Regression (median for MAE)         110.4     152.1     3.303     80.64         —      41.8     640.8  0.007761    0.9055
+
+Timings (s):
+  Ours                   train=38.9 infer40=16.4 infer20=8.4
+  MVE                    train=38.9 infer=0.4
+  MC-Dropout             train=60.4 infer40=16.7
+  Deep Ensemble (K=5)    train=297.3 infer=1.9
+  Quantile Regression    train=44.6 infer=0.4
+
+======================================================================
+COVID
+======================================================================
+train=8592  early-stop=1092  calibration=1092  test=5272
+Ours: R_epi=0.119 epi=8140.9 ale=24075.7 tau=1.236 q90=1.555
+MC-Dropout: epi=9923.9 noise=40209.7 R_epi=0.061
+  ensemble member 1/5 done
+  ensemble member 2/5 done
+  ensemble member 3/5 done
+  ensemble member 4/5 done
+  ensemble member 5/5 done
+Ensemble: R_epi=0.042 epi=4984.6 ale=25984.5
+
+Method                                         MAE      RMSE      MAPE      CRPS       NLL   Pinball      IS90       ECE    PICP90
+Ours (raw)                               2.187e+04 3.079e+04     2.068 1.614e+04     11.78      8432  1.44e+05   0.01846    0.8741
+Ours (+temperature)                      2.187e+04 3.079e+04     2.068 1.631e+04     11.74      8527 1.445e+05   0.07759    0.9219
+Ours (+conformal)                        2.187e+04 3.079e+04     2.068 1.614e+04     11.78      8432 1.454e+05   0.04327    0.8574
+MVE (heteroscedastic, deterministic)     2.185e+04 3.077e+04     2.065 1.613e+04     11.82      8421 1.458e+05   0.03911    0.8422
+MC-Dropout (homoscedastic)               2.168e+04  3.01e+04     2.044 1.695e+04     11.82      8871 1.575e+05    0.1569    0.9626
+Deep Ensemble (K=5)                      2.198e+04  3.04e+04     2.086 1.602e+04     11.71      8377 1.355e+05   0.01403    0.8919
+Quantile Regression (median for MAE)     2.087e+04 2.934e+04     1.967 1.549e+04         —      8023 1.328e+05   0.02724    0.9306
+
+Timings (s):
+  Ours                   train=37.9 infer40=6.7 infer20=3.4
+  MVE                    train=37.9 infer=0.1
+  MC-Dropout             train=20.2 infer40=7.0
+  Deep Ensemble (K=5)    train=149.4 infer=0.7
+  Quantile Regression    train=25.3 infer=0.1
+DONE

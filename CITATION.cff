@@ -1,0 +1,89 @@
+cff-version: 1.2.0
+message: "If you use this code or the processed data, please cite the article below and the original data sources listed under references."
+title: "Evaluating epistemic–aleatoric uncertainty decompositions in probabilistic load forecasting: operational value and limits"
+type: software
+license: MIT
+repository-code: "https://github.com/yangyeaaa/uq-decomposition-load-forecasting"
+keywords:
+  - probabilistic load forecasting
+  - uncertainty decomposition
+  - epistemic uncertainty
+  - aleatoric uncertainty
+  - conformal calibration
+  - deep ensembles
+authors:
+  - family-names: Yang
+    given-names: Ye
+    affiliation: "College of New Energy, Ningbo University of Technology; School of Electrical Engineering, Southeast University"
+  - family-names: Tian
+    given-names: Yuan
+    affiliation: "School of Computer Science, Wuhan University"
+  - family-names: Hu
+    given-names: Mengyan
+    affiliation: "School of Energy and Power Engineering, Huazhong University of Science and Technology"
+preferred-citation:
+  type: article
+  title: "Evaluating epistemic–aleatoric uncertainty decompositions in probabilistic load forecasting: operational value and limits"
+  authors:
+    - family-names: Yang
+      given-names: Ye
+    - family-names: Tian
+      given-names: Yuan
+    - family-names: Hu
+      given-names: Mengyan
+  journal: "Applied Energy"
+  status: submitted
+  year: 2026
+references:
+  - type: article
+    title: "Probabilistic energy forecasting: Global Energy Forecasting Competition 2014 and beyond"
+    authors:
+      - family-names: Hong
+        given-names: Tao
+      - family-names: Pinson
+        given-names: Pierre
+      - family-names: Fan
+        given-names: Shu
+      - family-names: Zareipour
+        given-names: Hamidreza
+      - family-names: Troccoli
+        given-names: Alberto
+      - family-names: Hyndman
+        given-names: Rob J.
+    journal: "International Journal of Forecasting"
+    volume: 32
+    issue: 3
+    start: 896
+    end: 913
+    year: 2016
+    notes: "Source of the GEFCom2014 data in data/GEFCom2014/."
+  - type: data
+    title: "Day-Ahead Electricity Demand Forecasting: Post-COVID Paradigm"
+    authors:
+      - family-names: Farrokhabadi
+        given-names: Mostafa
+    publisher:
+      name: "IEEE DataPort"
+    doi: "10.21227/67vy-bs34"
+    year: 2020
+    notes: "Source of the post-COVID data in data/postCOVID/; data courtesy of BluWave-ai."
+  - type: article
+    title: "Day-Ahead Electricity Demand Forecasting Competition: Post-COVID Paradigm"
+    authors:
+      - family-names: Farrokhabadi
+        given-names: Mostafa
+      - family-names: Browell
+        given-names: Jethro
+      - family-names: Wang
+        given-names: Yi
+      - family-names: Makonin
+        given-names: Stephen
+      - family-names: Su
+        given-names: Wenzhong
+      - family-names: Zareipour
+        given-names: Hamidreza
+    journal: "IEEE Open Access Journal of Power and Energy"
+    volume: 9
+    start: 185
+    end: 191
+    year: 2022

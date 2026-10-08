@@ -1,0 +1,62 @@
+
+======================================================================
+GEF
+======================================================================
+
+[1] review triage. Target A: absolute error. Target B: aleatoric-only interval failure (|e|/sigma_ale > z90).
+score                        MAE|flag 0%   MAE|flag 5%  MAE|flag 10%  MAE|flag 20%  MAE|flag 30%  AUC(|e| top10%)  AUC(ale-int fail)  fail rate in top10%
+sigma_epi (ens)                    108.9         106.0         102.7          97.8          94.5            0.668              0.554                0.147
+R_epi (ens)                        108.9         108.6         107.5         105.6         103.6            0.557              0.539                0.142
+sigma_total (ens)                  108.9         103.9         100.0          94.7          89.2            0.743              0.544                0.115
+sigma_ale (ens)                    108.9         104.0          99.9          94.9          89.7            0.741              0.540                0.119
+sigma_epi (MC-dropout)             108.9         104.8         104.3         103.7         104.3            0.578              0.475                0.098
+random                             108.9         109.3         109.5         109.2         109.4            0.491              0.482                0.110
+(base rate of aleatoric-interval failure: 0.113)
+rho(sigma_epi, |e|)=0.222  rho(sigma_ale, |e|)=0.340  rho(sigma_epi, |e|/sigma_ale)=0.093  rho(MCD epi, |e|/sigma_ale)=-0.024
+
+[2] daily R_epi vs daily miscoverage of the 90% interval (static conformal from the calibration half)
+rho(daily mean R_epi, daily miscoverage)=0.110   rho(daily sigma_epi, miscov)=0.166   rho(daily sigma_ale, miscov)=0.129
+miscoverage on the 20% highest-R_epi days = 0.087 vs other days = 0.076 (nominal 0.10)
+
+[3] reserve scheduling: S = mu + q(tau*) * sqrt(sigma_ale^2 + (c*sigma_epi)^2); c tuned on the calibration half
+ ratio    c*  total-only (c=1) aleatoric-only (c=0)  epi-reweighted (c*)  fixed reserve gain vs total
+   2:1   1.5             150.1                150.2                150.0          150.8         0.05%
+   5:1   2.0             212.4                212.6                212.2          217.7         0.08%
+  10:1   0.5             266.3                266.9                267.0          272.8        -0.26%
+  20:1   1.0             320.3                320.8                320.3          327.9         0.00%
+
+======================================================================
+COVID
+======================================================================
+
+[1] review triage. Target A: absolute error. Target B: aleatoric-only interval failure (|e|/sigma_ale > z90).
+score                        MAE|flag 0%   MAE|flag 5%  MAE|flag 10%  MAE|flag 20%  MAE|flag 30%  AUC(|e| top10%)  AUC(ale-int fail)  fail rate in top10%
+sigma_epi (ens)                  21979.3       21503.1       21244.1       21210.9       20999.0            0.554              0.537                0.153
+R_epi (ens)                      21979.3       21726.8       21780.7       21772.6       21870.4            0.498              0.536                0.176
+sigma_total (ens)                21979.3       21389.9       20633.6       19763.4       19316.0            0.643              0.507                0.165
+sigma_ale (ens)                  21979.3       21395.4       20629.1       19747.3       19298.9            0.643              0.504                0.165
+sigma_epi (MC-dropout)           21979.3       22173.9       22337.7       22830.4       23304.0            0.397              0.433                0.061
+random                           21979.3       21986.7       21920.9       22061.1       22041.1            0.493              0.503                0.121
+(base rate of aleatoric-interval failure: 0.117)
+rho(sigma_epi, |e|)=0.085  rho(sigma_ale, |e|)=0.137  rho(sigma_epi, |e|/sigma_ale)=0.022  rho(MCD epi, |e|/sigma_ale)=-0.019
+
+[2] daily R_epi vs daily miscoverage of the 90% interval (static conformal from the calibration half)
+rho(daily mean R_epi, daily miscoverage)=0.038   rho(daily sigma_epi, miscov)=0.009   rho(daily sigma_ale, miscov)=-0.007
+miscoverage on the 20% highest-R_epi days = 0.120 vs other days = 0.128 (nominal 0.10)
+
+[3] reserve scheduling: S = mu + q(tau*) * sqrt(sigma_ale^2 + (c*sigma_epi)^2); c tuned on the calibration half
+ ratio    c*  total-only (c=1) aleatoric-only (c=0)  epi-reweighted (c*)  fixed reserve gain vs total
+   2:1   4.0           28726.5              28735.9              28657.8        29120.7         0.24%
+   5:1   3.0           40037.4              40101.2              39887.0        41542.6         0.38%
+  10:1   2.0           50085.0              50239.8              49755.6        52500.5         0.66%
+  20:1   3.0           60858.5              61116.7              60248.9        65262.5         1.00%
+
+[4] post-COVID: daily mean R_epi and sigma_epi over the validation period (in time order) and the test period
+val 2019-12-25..2020-02-28 (pre)       mean R_epi=0.053  sigma_epi=    8005  sigma_ale=   37234
+val 2020-02-29..03-14 (pre, late)      mean R_epi=0.032  sigma_epi=    4988  sigma_ale=   30267
+val 2020-03-15..03-30 (onset)          mean R_epi=0.020  sigma_epi=    3250  sigma_ale=   24109
+test 2020-03-25..04-30 (lockdown)      mean R_epi=0.029  sigma_epi=    3685  sigma_ale=   23634
+test 05..06                            mean R_epi=0.042  sigma_epi=    4947  sigma_ale=   25594
+test 07..08                            mean R_epi=0.047  sigma_epi=    5341  sigma_ale=   25931
+test 09..11-05                         mean R_epi=0.044  sigma_epi=    5459  sigma_ale=   27897
+DONE

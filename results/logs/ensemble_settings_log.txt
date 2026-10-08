@@ -1,0 +1,15 @@
+config=base es_NLL=6.418 es_CRPS=84.23 cal_NLL=6.391 cal_CRPS=82.4 test_NLL=6.34 test_CRPS=78.93 MAE=108.9 PICP90=0.8963 ECE=0.01675 sig_epi=30.39 sig_ale=131.2 R_epi=0.057595036923885345
+config=wd1e-2 es_NLL=6.415 es_CRPS=84.24 cal_NLL=6.39 cal_CRPS=82.44 test_NLL=6.338 test_CRPS=78.82 MAE=108.8 PICP90=0.9 ECE=0.01978 sig_epi=30.06 sig_ale=132.9 R_epi=0.05568407475948334
+config=wd1e-1 es_NLL=6.4 es_CRPS=83.88 cal_NLL=6.375 cal_CRPS=82.02 test_NLL=6.332 test_CRPS=78.46 MAE=108 PICP90=0.9169 ECE=0.04484 sig_epi=33.24 sig_ale=142.1 R_epi=0.059175554662942886
+config=wd1 es_NLL=6.406 es_CRPS=83.92 cal_NLL=6.374 cal_CRPS=81.9 test_NLL=6.33 test_CRPS=78.11 MAE=108.1 PICP90=0.9099 ECE=0.02766 sig_epi=25.17 sig_ale=136.9 R_epi=0.03762470558285713
+config=p0 es_NLL=6.458 es_CRPS=86.77 cal_NLL=6.431 cal_CRPS=85.12 test_NLL=6.38 test_CRPS=82.04 MAE=113.3 PICP90=0.8878 ECE=0.01554 sig_epi=48 sig_ale=129.8 R_epi=0.13791532814502716
+config=p0.3 es_NLL=6.435 es_CRPS=86.07 cal_NLL=6.405 cal_CRPS=83.51 test_NLL=6.362 test_CRPS=79.34 MAE=108.4 PICP90=0.9274 ECE=0.0632 sig_epi=25.44 sig_ale=153.9 R_epi=0.029664436355233192
+config=bag es_NLL=6.41 es_CRPS=84.13 cal_NLL=6.381 cal_CRPS=82.47 test_NLL=6.342 test_CRPS=79.08 MAE=108.9 PICP90=0.9138 ECE=0.03976 sig_epi=37.09 sig_ale=140.2 R_epi=0.07251061499118805
+base rank corr of per-input sigma_epi with base: 1.0
+wd1e-2 rank corr of per-input sigma_epi with base: 0.801
+wd1e-1 rank corr of per-input sigma_epi with base: 0.732
+wd1 rank corr of per-input sigma_epi with base: 0.526
+p0 rank corr of per-input sigma_epi with base: 0.366
+p0.3 rank corr of per-input sigma_epi with base: 0.496
+bag rank corr of per-input sigma_epi with base: 0.485
+DONE

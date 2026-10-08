@@ -1,0 +1,2 @@
+GEF: neural QR CRPS(grid)=79.24   LightGBM quantile CRPS(grid)=83.10   (unit: standardized*scale -> MW for GEF, kW for COVID)
+COVID: neural QR CRPS(grid)=15206.75   LightGBM quantile CRPS(grid)=15814.63   (unit: standardized*scale -> MW for GEF, kW for COVID)

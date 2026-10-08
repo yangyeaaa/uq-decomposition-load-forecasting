@@ -1,0 +1,43 @@
+
+[1] GEF: Table-4 ensemble rows with ddof=1
+  K=5: MAE=108.9 RMSE=151.4 MAPE=3.255 CRPS=78.93 NLL=6.34 Pinball=41.31 IS90=634.3 ECE=0.01675 PICP90=0.8963  R_epi=0.058 sig_epi=30.4 sig_ale=131.2  PICP90 ale-only=0.887
+  K=10: MAE=108.4 RMSE=150.7 MAPE=3.234 CRPS=78.64 NLL=6.334 Pinball=41.16 IS90=631.5 ECE=0.02873 PICP90=0.9036  R_epi=0.061 sig_epi=33.3 sig_ale=135.0  PICP90 ale-only=0.894
+
+[1] COVID: Table-4 ensemble rows with ddof=1
+  K=5: MAE=2.198e+04 RMSE=3.04e+04 MAPE=2.086 CRPS=1.602e+04 NLL=11.71 Pinball=8376 IS90=1.353e+05 ECE=0.01535 PICP90=0.8925  R_epi=0.051 sig_epi=5573.0 sig_ale=25984.5  PICP90 ale-only=0.883
+  K=10: MAE=2.145e+04 RMSE=2.984e+04 MAPE=2.031 CRPS=1.568e+04 NLL=11.68 Pinball=8199 IS90=1.334e+05 ECE=0.03461 PICP90=0.9016  R_epi=0.063 sig_epi=6529.9 sig_ale=26486.6  PICP90 ale-only=0.893
+
+[2] GEF K sensitivity, ddof=1
+  K  sig_epi  sig_ale  R_epi     MAE    CRPS  PICP90 rho disjoint  top10 overlap
+  3     29.3    132.0  0.057   109.1    79.0   0.898        0.326          0.343
+  5     30.4    131.2  0.058   108.9    78.9   0.896        0.593          0.437
+ 10     33.3    135.0  0.061   108.4    78.6   0.904        0.667          0.556
+ 20     33.8    138.2  0.059   107.9    78.4   0.911          nan            nan
+
+[3] reference test, ensemble ddof=1
+  K  ale rho ale bias epi dense epi sparse  ratio   AUC rho(epi,|mu-f|) dense rho(epi,|x|) RMS err dense RMS err sparse
+  3    0.892   +0.123      18.2       25.7   1.41 0.636           0.159              0.125          33.3           56.0
+  5    0.893   +0.130      19.3       29.5   1.53 0.727           0.224              0.179          31.0           54.6
+ 10    0.904   +0.112      18.2       27.5   1.51 0.779           0.298              0.219          29.9           54.3
+ 20    0.904   +0.107      18.8       29.7   1.58 0.802           0.323              0.379          29.7           53.1
+MC dropout p=0.1 (M=40, ddof=1 factor 1.013): AUC=0.555 ratio=1.17 dense rho(epi,|x|)=0.529
+
+[4] reducibility, K=5, 3 replicates, ddof=1
+  frac 0.10: sig_epi=50.2±0.8  sig_ale=188.6±2.0  R_epi=0.078±0.004  PICP ale-only/total=0.894/0.907
+  frac 0.25: sig_epi=43.8±0.4  sig_ale=152.8±1.6  R_epi=0.085±0.000  PICP ale-only/total=0.906/0.920
+  frac 0.50: sig_epi=31.5±3.4  sig_ale=140.6±0.4  R_epi=0.055±0.011  PICP ale-only/total=0.903/0.911
+  frac 0.75: sig_epi=32.0±0.2  sig_ale=134.3±2.7  R_epi=0.061±0.002  PICP ale-only/total=0.890/0.900
+  frac 1.00: sig_epi=32.0±2.5  sig_ale=138.2±6.4  R_epi=0.059±0.007  PICP ale-only/total=0.901/0.909
+
+[5] data-scarce regime, K=5, ddof=1 (sig_epi x1.118; R_epi recomputed from saved per-input arrays)
+  GEF M=30: R_epi=0.171 sig_epi=119.7 PICP90 ale-only=0.713 total=0.769
+  GEF M=60: R_epi=0.195 sig_epi=117.2 PICP90 ale-only=0.708 total=0.791
+  GEF M=90: R_epi=0.249 sig_epi=124.5 PICP90 ale-only=0.602 total=0.670
+  GEF M=180: R_epi=0.181 sig_epi=104.0 PICP90 ale-only=0.717 total=0.787
+  GEF M=359: R_epi=0.104 sig_epi=47.0 PICP90 ale-only=0.914 total=0.928
+  COVID M=30: R_epi=0.421 sig_epi=27475.7 PICP90 ale-only=0.560 total=0.690
+  COVID M=60: R_epi=0.205 sig_epi=15041.3 PICP90 ale-only=0.704 total=0.764
+  COVID M=90: R_epi=0.170 sig_epi=24797.3 PICP90 ale-only=0.982 total=0.986
+  COVID M=180: R_epi=0.092 sig_epi=8061.5 PICP90 ale-only=0.870 total=0.883
+  COVID M=359: R_epi=0.083 sig_epi=6978.1 PICP90 ale-only=0.872 total=0.886
+DONE

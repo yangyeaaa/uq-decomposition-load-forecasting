@@ -1,0 +1,110 @@
+
+======================================================================
+[e1] GEF: residual diagnostics, K=10 ensemble, test partition
+======================================================================
+raw residual std (MW) by group -> evidence of conditional heteroscedasticity
+  hour bins         -1     -1      0      0      0      1
+  residual std     123    148    148    173    166    138
+  temp bins       -3.1   -1.3   -0.7   -0.1    0.5    1.0
+  residual std     154    155    138     95    117    210
+  load bins       2107   2694   3093   3382   3584   3838
+  residual std     100    143    157    139    148    185
+  ratio of largest to smallest group std: hour 1.41
+std of standardized residual e/sigma_total by temperature bin (should be ~1 if the variance head captures heteroscedasticity):
+    1.00   1.11   1.02   0.86   0.91   1.14
+standardized residuals: mean=+0.014 std=1.016 skew=-0.082 excess kurtosis=+1.636 | PIT KS stat=0.033 (p=2.2e-08)
+PIT histogram (10 bins, uniform=0.10): 0.082 0.093 0.094 0.107 0.124 0.118 0.102 0.094 0.092 0.094
+empirical quantiles of z vs N(0,1): -2.65/-2.33 -1.57/-1.64 -0.58/-0.67 -0.00/+0.00 +0.61/+0.67 +1.68/+1.64 +2.64/+2.33
+
+======================================================================
+[e1] COVID: residual diagnostics, K=10 ensemble, test partition
+======================================================================
+raw residual std (MW) by group -> evidence of conditional heteroscedasticity
+  hour bins         -1     -1      0      0      0      1
+  residual std   22639  21697  31369  35821  31761  27625
+  temp bins       -2.0   -0.5   -0.2    0.1    0.5    1.1
+  residual std   24362  26426  28655  27875  33521  30247
+  load bins     876912 980414 1011122 1046409 1089805 1154147
+  residual std   23122  24053  27730  27024  27521  29411
+  ratio of largest to smallest group std: hour 1.65
+std of standardized residual e/sigma_total by temperature bin (should be ~1 if the variance head captures heteroscedasticity):
+    0.91   0.96   1.06   1.03   1.12   0.99
+standardized residuals: mean=-0.243 std=1.036 skew=-0.597 excess kurtosis=+2.369 | PIT KS stat=0.105 (p=6.6e-51)
+PIT histogram (10 bins, uniform=0.10): 0.116 0.121 0.120 0.123 0.114 0.109 0.096 0.088 0.058 0.056
+empirical quantiles of z vs N(0,1): -3.47/-2.33 -1.93/-1.64 -0.80/-0.67 -0.21/+0.00 +0.38/+0.67 +1.34/+1.64 +2.20/+2.33
+
+======================================================================
+[e2] GEF: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+                             MAE      RMSE      CRPS       NLL   Pinball       ECE    PICP90    PIT_KS
+Gaussian K=5               108.9     151.4     78.93     6.341     41.31   0.01531    0.8947   0.02429
+Student-t K=5 (nu=4.3)     106.8     148.4     77.63     6.307      40.6   0.02311    0.9274    0.0197
+decomposition under t: sigma_ale(scale)=113.6  sigma_epi=27.8  R_epi=0.061  | Gaussian: sigma_ale=131.2 sigma_epi=27.2 R_epi=0.047
+(t-scale is not a std; std = scale*sqrt(nu/(nu-2)) = 156.1 MW)
+
+======================================================================
+[e2] COVID: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+
+======================================================================
+[e2] GEF: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+                             MAE      RMSE      CRPS       NLL   Pinball       ECE    PICP90    PIT_KS
+Gaussian K=5               108.9     151.4     78.93     6.341     41.31   0.01531    0.8947   0.02429
+Student-t K=5 (nu=4.3)     106.8     148.4     77.63     6.307      40.6   0.02311    0.9274    0.0197
+decomposition under t: sigma_ale(scale)=113.6  sigma_epi=27.8  R_epi=0.061  | Gaussian: sigma_ale=131.2 sigma_epi=27.2 R_epi=0.047
+(t-scale is not a std; std = scale*sqrt(nu/(nu-2)) = 156.1 MW)
+
+======================================================================
+[e2] COVID: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+                             MAE      RMSE      CRPS       NLL   Pinball       ECE    PICP90    PIT_KS
+Gaussian K=5           2.198e+04  3.04e+04 1.602e+04     11.71      8377   0.01403    0.8919    0.1272
+Student-t K=5 (nu=4.1) 2.078e+04  2.94e+04 1.521e+04      11.6      7968  0.004162    0.9002   0.08534
+decomposition under t: sigma_ale(scale)=19916.7  sigma_epi=5045.5  R_epi=0.066  | Gaussian: sigma_ale=25984.5 sigma_epi=4984.6 R_epi=0.042
+(t-scale is not a std; std = scale*sqrt(nu/(nu-2)) = 27688.3 MW)
+
+======================================================================
+[f] GEF: adding target-day temperature (K=5 ensembles, both trained on identical samples)
+======================================================================
+without (baseline)     MAE=107.5 CRPS=78.2 NLL=6.332 PICP90=0.906 | sigma_ale=136.9 sigma_epi=29.9 R_epi=0.052
+with target-day temp   MAE=83.2 CRPS=59.9 NLL=6.074 PICP90=0.910 | sigma_ale=104.7 sigma_epi=28.1 R_epi=0.075
+change: MAE -22.6%  sigma_ale -23.5%  sigma_epi -6.2%
+
+======================================================================
+[f] COVID: adding target-day temperature (K=5 ensembles, both trained on identical samples)
+======================================================================
+without (baseline)     MAE=22556.1 CRPS=16388.1 NLL=11.748 PICP90=0.879 | sigma_ale=25523.4 sigma_epi=5717.9 R_epi=0.053
+
+======================================================================
+[e2] GEF: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+                             MAE      RMSE      CRPS       NLL   Pinball       ECE    PICP90    PIT_KS
+Gaussian K=5               108.9     151.4     78.93     6.341     41.31   0.01531    0.8947   0.02429
+Student-t K=5 (nu=4.3)     106.8     148.4     77.63     6.307      40.6   0.02311    0.9274    0.0197
+decomposition under t: sigma_ale(scale)=113.6  sigma_epi=27.8  R_epi=0.061  | Gaussian: sigma_ale=131.2 sigma_epi=27.2 R_epi=0.047
+(t-scale is not a std; std = scale*sqrt(nu/(nu-2)) = 156.1 MW)
+
+======================================================================
+[e2] COVID: Student-t heteroscedastic likelihood, K=5 ensemble (mixture approximated by pooled scale)
+======================================================================
+                             MAE      RMSE      CRPS       NLL   Pinball       ECE    PICP90    PIT_KS
+Gaussian K=5           2.198e+04  3.04e+04 1.602e+04     11.71      8377   0.01403    0.8919    0.1272
+Student-t K=5 (nu=4.1) 2.078e+04  2.94e+04 1.521e+04      11.6      7968  0.004162    0.9002   0.08534
+decomposition under t: sigma_ale(scale)=19916.7  sigma_epi=5045.5  R_epi=0.066  | Gaussian: sigma_ale=25984.5 sigma_epi=4984.6 R_epi=0.042
+(t-scale is not a std; std = scale*sqrt(nu/(nu-2)) = 27688.3 MW)
+
+======================================================================
+[f] GEF: adding target-day temperature (K=5 ensembles, both trained on identical samples)
+======================================================================
+without (baseline)     MAE=107.5 CRPS=78.2 NLL=6.332 PICP90=0.906 | sigma_ale=136.9 sigma_epi=29.9 R_epi=0.052
+with target-day temp   MAE=83.2 CRPS=59.9 NLL=6.074 PICP90=0.910 | sigma_ale=104.7 sigma_epi=28.1 R_epi=0.075
+change: MAE -22.6%  sigma_ale -23.5%  sigma_epi -6.2%
+
+======================================================================
+[f] COVID: adding target-day temperature (K=5 ensembles, both trained on identical samples)
+======================================================================
+without (baseline)     MAE=22556.1 CRPS=16388.1 NLL=11.748 PICP90=0.879 | sigma_ale=25523.4 sigma_epi=5717.9 R_epi=0.053
+with target-day temp   MAE=22226.3 CRPS=16269.5 NLL=11.722 PICP90=0.913 | sigma_ale=27988.7 sigma_epi=8992.3 R_epi=0.105
+change: MAE -1.5%  sigma_ale +9.7%  sigma_epi +57.3%
+DONE

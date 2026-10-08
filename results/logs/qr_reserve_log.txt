@@ -1,0 +1,15 @@
+
+GEF: QR reserve policy (S = QR tau*-quantile, no calibration) vs ensemble total-uncertainty policy; cost per hour in MW
+  QR test MAE (median) = 110.38 MW ; ensemble MAE = 108.36 MW
+   2:1  deterministic=  161.83  ensemble total=  149.99  QR tau*-quantile=  153.73   QR vs total = +2.50% [95% CI +0.09, +5.52]
+   5:1  deterministic=  322.23  ensemble total=  212.33  QR tau*-quantile=  220.64   QR vs total = +3.91% [95% CI +0.52, +7.59]
+  10:1  deterministic=  589.57  ensemble total=  266.01  QR tau*-quantile=  270.75   QR vs total = +1.78% [95% CI -2.36, +6.36]
+  20:1  deterministic= 1124.25  ensemble total=  318.80  QR tau*-quantile=  318.87   QR vs total = +0.02% [95% CI -3.80, +4.84]
+
+COVID: QR reserve policy (S = QR tau*-quantile, no calibration) vs ensemble total-uncertainty policy; cost per hour in MW
+  QR test MAE (median) = 20.87 MW ; ensemble MAE = 21.45 MW
+   2:1  deterministic=   29.21  ensemble total=   28.50  QR tau*-quantile=   28.40   QR vs total = -0.34% [95% CI -2.37, +2.35]
+   5:1  deterministic=   52.49  ensemble total=   39.97  QR tau*-quantile=   40.65   QR vs total = +1.72% [95% CI -1.45, +6.37]
+  10:1  deterministic=   91.29  ensemble total=   50.23  QR tau*-quantile=   51.72   QR vs total = +2.98% [95% CI -1.73, +9.68]
+  20:1  deterministic=  168.89  ensemble total=   61.50  QR tau*-quantile=   63.11   QR vs total = +2.62% [95% CI -4.13, +13.91]
+DONE

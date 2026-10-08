@@ -1,0 +1,54 @@
+
+======================================================================
+GEF
+======================================================================
+Ensemble                                 MAE      RMSE      CRPS       NLL   Pinball      IS90       ECE    PICP90   R_epi  sig_epi
+K=5 raw                                108.9     151.4     78.93     6.341     41.31     634.6   0.01531    0.8947   0.047     27.2
+K=5 +static conformal                  108.9     151.4     78.93     6.341     41.31     637.5    0.0228     0.922
+K=5 +online conformal W=90d            108.9     151.4     78.93     6.341     41.31     636.5  0.004213    0.8973
+   PICP90 of the aleatoric-only Gaussian interval: 0.887 vs total 0.895
+K=10 raw                               108.4     150.7     78.64     6.335     41.16     631.5   0.02763    0.9029   0.056     31.6
+K=10 +static conformal                 108.4     150.7     78.64     6.335     41.16     634.1    0.0219    0.9195
+K=10 +online conformal W=90d           108.4     150.7     78.64     6.335     41.16     634.2  0.005098    0.8973
+   PICP90 of the aleatoric-only Gaussian interval: 0.894 vs total 0.903
+
+[operational, K=10] review triage: MAE of the unflagged 90% (MW) / AUC for top-10% errors / AUC for aleatoric-interval failure
+   sigma_epi    MAE|flag10%=   101.7   AUC(top10% err)=0.687   AUC(ale-int fail)=0.559
+   R_epi        MAE|flag10%=   105.8   AUC(top10% err)=0.576   AUC(ale-int fail)=0.551
+   sigma_total  MAE|flag10%=    99.5   AUC(top10% err)=0.739   AUC(ale-int fail)=0.541
+   sigma_ale    MAE|flag10%=    99.5   AUC(top10% err)=0.737   AUC(ale-int fail)=0.537
+   random       MAE|flag10%=   108.9   AUC(top10% err)=0.492   AUC(ale-int fail)=0.486
+   rho(sigma_epi,|e|)=0.283  rho(sigma_ale,|e|)=0.334  rho(sigma_epi,|e|/sigma_ale)=0.135
+[operational, K=10] reserve: S = mu + q * sqrt(ale^2 + (c*epi)^2), c tuned on the calibration half
+    2:1  total-only=150.0  ale-only=150.2  epi-reweighted(c*=3)=149.5  gain vs total=+0.36%
+    5:1  total-only=212.4  ale-only=213.0  epi-reweighted(c*=2)=211.7  gain vs total=+0.30%
+   10:1  total-only=266.0  ale-only=266.7  epi-reweighted(c*=1.5)=265.7  gain vs total=+0.10%
+   20:1  total-only=318.8  ale-only=319.9  epi-reweighted(c*=0.5)=319.8  gain vs total=-0.31%
+
+======================================================================
+COVID
+======================================================================
+Ensemble                                 MAE      RMSE      CRPS       NLL   Pinball      IS90       ECE    PICP90   R_epi  sig_epi
+K=5 raw                            2.198e+04  3.04e+04 1.602e+04     11.71      8377 1.355e+05   0.01403    0.8919   0.042   4984.6
+K=5 +static conformal              2.198e+04  3.04e+04 1.602e+04     11.71      8377 1.364e+05   0.05463    0.8733
+K=5 +online conformal W=90d        2.198e+04  3.04e+04 1.602e+04     11.71      8377 1.374e+05  0.002716    0.9002
+   PICP90 of the aleatoric-only Gaussian interval: 0.883 vs total 0.892
+K=10 raw                           2.145e+04 2.984e+04 1.568e+04     11.68      8198 1.335e+05   0.03346    0.9006   0.057   6194.8
+K=10 +static conformal             2.145e+04 2.984e+04 1.568e+04     11.68      8198 1.345e+05   0.04016    0.8811
+K=10 +online conformal W=90d       2.145e+04 2.984e+04 1.568e+04     11.68      8198 1.355e+05  0.002796    0.9004
+   PICP90 of the aleatoric-only Gaussian interval: 0.893 vs total 0.901
+
+[operational, K=10] review triage: MAE of the unflagged 90% (MW) / AUC for top-10% errors / AUC for aleatoric-interval failure
+   sigma_epi    MAE|flag10%= 20841.1   AUC(top10% err)=0.600   AUC(ale-int fail)=0.569
+   R_epi        MAE|flag10%= 21016.6   AUC(top10% err)=0.510   AUC(ale-int fail)=0.556
+   sigma_total  MAE|flag10%= 20099.2   AUC(top10% err)=0.658   AUC(ale-int fail)=0.539
+   sigma_ale    MAE|flag10%= 20159.8   AUC(top10% err)=0.650   AUC(ale-int fail)=0.530
+   random       MAE|flag10%= 21417.4   AUC(top10% err)=0.489   AUC(ale-int fail)=0.497
+   rho(sigma_epi,|e|)=0.154  rho(sigma_ale,|e|)=0.163  rho(sigma_epi,|e|/sigma_ale)=0.093
+[operational, K=10] reserve: S = mu + q * sqrt(ale^2 + (c*epi)^2), c tuned on the calibration half
+    2:1  total-only=28498.5  ale-only=28504.8  epi-reweighted(c*=4)=28470.6  gain vs total=+0.10%
+    5:1  total-only=39972.1  ale-only=40037.9  epi-reweighted(c*=4)=39867.7  gain vs total=+0.26%
+   10:1  total-only=50237.2  ale-only=50327.4  epi-reweighted(c*=3)=50032.8  gain vs total=+0.41%
+   20:1  total-only=61390.4  ale-only=61703.4  epi-reweighted(c*=4)=61068.9  gain vs total=+0.52%
+[K=10] post-COVID segments: test 03-25..04-30 (lockdown): R_epi=0.048; 05..06: R_epi=0.058; 07..08: R_epi=0.060; 09..11-05: R_epi=0.057
+DONE

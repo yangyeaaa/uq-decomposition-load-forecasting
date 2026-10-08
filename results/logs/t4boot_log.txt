@@ -1,0 +1,6 @@
+ens K=10         AUC=0.655 [0.613, 0.687]   contrast=+4.6 MW [+3.4, +5.7]   P(AUC<=0.5)=0.000
+ens K=5 (1-5)    AUC=0.601 [0.563, 0.635]   contrast=+4.4 MW [+2.8, +6.0]   P(AUC<=0.5)=0.000
+ens K=5 (6-10)   AUC=0.632 [0.590, 0.670]   contrast=+4.8 MW [+3.2, +6.3]   P(AUC<=0.5)=0.000
+Delta e K=10     AUC=0.641 [0.602, 0.678]   contrast=+15.0 MW [+11.0, +19.1]   P(AUC<=0.5)=0.000
+MCD p=0.1        AUC=0.589 [0.568, 0.609]   contrast=+2.2 MW [+1.6, +2.7]   P(AUC<=0.5)=0.000
+block bootstrap by target day, B=1000

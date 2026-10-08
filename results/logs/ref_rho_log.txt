@@ -1,0 +1,18 @@
+Table tab:reference recomputed (norm of the 14 standardized lagged load and temperature values; Bessel-corrected ensemble variance)
+MC dropout p=0.05        rho(ale,sigma)=0.80 bias=+7% ratio=1.12 AUC=0.54 rho(epi,|mu-f|)=0.14 rho(epi,||x||)=0.62 | rho(|mu-f|,||x||)=0.10
+MC dropout p=0.10        rho(ale,sigma)=0.81 bias=+13% ratio=1.17 AUC=0.56 rho(epi,|mu-f|)=0.15 rho(epi,||x||)=0.61 | rho(|mu-f|,||x||)=0.12
+MC dropout p=0.30        rho(ale,sigma)=0.66 bias=+30% ratio=1.21 AUC=0.56 rho(epi,|mu-f|)=0.25 rho(epi,||x||)=0.58 | rho(|mu-f|,||x||)=0.27
+Ensemble K=5             rho(ale,sigma)=0.89 bias=+13% ratio=1.53 AUC=0.73 rho(epi,|mu-f|)=0.22 rho(epi,||x||)=0.23 | rho(|mu-f|,||x||)=0.13
+Ensemble K=10            rho(ale,sigma)=0.90 bias=+11% ratio=1.51 AUC=0.78 rho(epi,|mu-f|)=0.30 rho(epi,||x||)=0.27 | rho(|mu-f|,||x||)=0.12
+Ensemble K=20            rho(ale,sigma)=0.90 bias=+11% ratio=1.58 AUC=0.80 rho(epi,|mu-f|)=0.32 rho(epi,||x||)=0.41 | rho(|mu-f|,||x||)=0.13
+Ensemble + dropout       rho(ale,sigma)=0.89 bias=+15% ratio=1.27 AUC=0.64 rho(epi,|mu-f|)=0.22 rho(epi,||x||)=0.61 | rho(|mu-f|,||x||)=0.13
+
+Table tab:tempbins (MW): bins <-1 | -1..0 | 0..0.8 | 0.8..1.5 | >1.5
+Estimation error (ens K=5)       26.7     21.9     22.0     35.8     67.1
+Known sigma(x)                   75.5    107.5    166.2    195.3    205.2
+Dropout epi p=0.1                35.0     31.2     28.9     31.5     59.5
+Ensemble epi K=5 (Bessel)        19.8     19.0     19.0     27.5     37.3
+Dropout ale                     104.8    130.2    161.3    169.4    206.5
+Ensemble ale                    104.4    127.2    162.4    179.7    210.1
+n                                2109     2384     2155     1546      390
+DONE

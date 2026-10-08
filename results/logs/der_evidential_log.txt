@@ -1,0 +1,18 @@
+lam=0 seed=1 cal_NLL=6.392 cal_CRPS=85.24 MAE=108.8 NLL=6.338 CRPS=80.2 ECE=0.02014 PICP90=0.9114 R_epi=0.4307 R_epi_med=0.4213 nu_med=1.374 alpha_med=3.272 sig_ale=113.3 sig_epi=98.95
+lam=0 seed=2 cal_NLL=6.39 cal_CRPS=85.41 MAE=110.6 NLL=6.344 CRPS=81.14 ECE=0.01038 PICP90=0.8858 R_epi=0.3718 R_epi_med=0.3687 nu_med=1.712 alpha_med=3.368 sig_ale=110.9 sig_epi=86.26
+lam=0.001 seed=1 cal_NLL=6.386 cal_CRPS=85.37 MAE=109.9 NLL=6.335 CRPS=80.54 ECE=0.01669 PICP90=0.9133 R_epi=0.442 R_epi_med=0.4366 nu_med=1.29 alpha_med=3.251 sig_ale=113.1 sig_epi=101
+lam=0.001 seed=2 cal_NLL=6.392 cal_CRPS=85.69 MAE=111.7 NLL=6.352 CRPS=81.76 ECE=0.003426 PICP90=0.8929 R_epi=0.4082 R_epi_med=0.4047 nu_med=1.471 alpha_med=3.34 sig_ale=111.3 sig_epi=93.27
+lam=0.01 seed=1 cal_NLL=6.38 cal_CRPS=84.74 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.523 R_epi_med=0.5109 nu_med=0.9574 alpha_med=3.095 sig_ale=105.5 sig_epi=110.6
+lam=0.01 seed=2 cal_NLL=6.395 cal_CRPS=85.71 MAE=111.6 NLL=6.352 CRPS=81.82 ECE=0.01788 PICP90=0.8851 R_epi=0.5074 R_epi_med=0.5057 nu_med=0.9774 alpha_med=2.958 sig_ale=98.8 sig_epi=100.9
+lam=0.1 seed=1 cal_NLL=6.393 cal_CRPS=85.08 MAE=108.8 NLL=6.334 CRPS=79.92 ECE=0.02372 PICP90=0.8983 R_epi=0.9269 R_epi_med=0.9284 nu_med=0.07712 alpha_med=1.646 sig_ale=43.91 sig_epi=154.1
+lam=0.1 seed=2 cal_NLL=6.403 cal_CRPS=85.62 MAE=111.1 NLL=6.355 CRPS=81.51 ECE=0.02295 PICP90=0.9039 R_epi=0.9242 R_epi_med=0.9339 nu_med=0.07079 alpha_med=1.593 sig_ale=45.55 sig_epi=159.9
+lam=1 seed=1 cal_NLL=6.437 cal_CRPS=86.23 MAE=111.3 NLL=6.392 CRPS=82.1 ECE=0.0212 PICP90=0.9467 R_epi=0.9892 R_epi_med=0.9897 nu_med=0.01041 alpha_med=1.006 sig_ale=128.6 sig_epi=1238
+lam=1 seed=2 cal_NLL=6.442 cal_CRPS=86.88 MAE=112.8 NLL=6.392 CRPS=83.22 ECE=0.02176 PICP90=0.9381 R_epi=0.9904 R_epi_med=0.9918 nu_med=0.008275 alpha_med=1.009 sig_ale=93.3 sig_epi=993.7
+lam=0 seed=3 cal_NLL=6.402 cal_CRPS=86.3 MAE=114.8 NLL=6.369 CRPS=83.9 ECE=0.02051 PICP90=0.8877 R_epi=0.3634 R_epi_med=0.3642 nu_med=1.746 alpha_med=3.551 sig_ale=112 sig_epi=85.91
+lam=0.01 seed=3 cal_NLL=6.401 cal_CRPS=86.3 MAE=113.2 NLL=6.362 CRPS=82.76 ECE=0.01267 PICP90=0.9115 R_epi=0.5906 R_epi_med=0.6009 nu_med=0.6643 alpha_med=3.01 sig_ale=98.51 sig_epi=119.2
+reparam nu x 0.1 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.9157 R_epi_med=0.9126 nu_med=0.09574 alpha_med=3.095 sig_ale=44.28 sig_epi=146.4
+reparam nu x 0.3 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.7841 R_epi_med=0.7769 nu_med=0.2872 alpha_med=3.095 sig_ale=70.91 sig_epi=135.4
+reparam nu x 1.0 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.523 R_epi_med=0.5109 nu_med=0.9574 alpha_med=3.095 sig_ale=105.5 sig_epi=110.6
+reparam nu x 3.0 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.2689 R_epi_med=0.2582 nu_med=2.872 alpha_med=3.095 sig_ale=130.7 sig_epi=79.21
+reparam nu x 10.0 MAE=109 NLL=6.332 CRPS=80.08 ECE=0.01896 PICP90=0.9143 R_epi=0.09981 R_epi_med=0.09457 nu_med=9.574 alpha_med=3.095 sig_ale=145.1 sig_epi=48.21
+DONE

@@ -1,0 +1,9 @@
+row,estimator,unthinned_MW,thinned_MW,contrast_MW,contrast_ci_lo,contrast_ci_hi,auc,auc_ci_lo,auc_ci_hi,group
+1,Estimation error Δe (K=10),1.2,16.2,15.0,11.0,19.1,0.64,0.60,0.68,reference
+2,Ensemble K=5 replicate 1 (members 1-5),0.5,4.9,4.4,2.8,6.0,0.60,0.56,0.64,ensemble
+3,Ensemble K=5 replicate 2 (members 6-10),0.7,5.5,4.8,3.2,6.3,0.63,0.59,0.67,ensemble
+4,Ensemble K=10,0.3,4.9,4.6,3.4,5.7,0.66,0.61,0.69,ensemble
+5,MC dropout p=0.05,1.9,1.6,-0.3,,,0.49,,,dropout
+6,"MC dropout p=0.10, seed 1",-5.2,-3.2,2.0,1.4,2.6,0.59,,,dropout
+7,"MC dropout p=0.10, mean of seeds 1-3",-1.7,-1.1,0.6,0.2,0.9,0.54,,,dropout
+8,MC dropout p=0.30,1.5,3.3,1.8,,,0.55,,,dropout
